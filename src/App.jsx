@@ -3,8 +3,9 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-
-
+import Landing from './components/Landing/Landing'
+import SignIn from './components/SignIn/SignIn'
+import SignUp from './components/SignUp/SignUp'
 
 
 function App() {
@@ -13,11 +14,10 @@ function App() {
       <div className="app__wrap">
         <Header />
         <div className="app__content">
-          CONTENT
           <Routes>
-
-            <Route />
-
+            <Route path="/" element={<Landing />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </div>
         <Footer />
