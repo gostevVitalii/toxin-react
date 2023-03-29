@@ -1,29 +1,22 @@
 import './App.css'
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import { Route, Routes } from 'react-router-dom'
+import { Layout } from './components/Layout/Layout'
 import Landing from './components/Landing/Landing'
 import SignIn from './components/SignIn/SignIn'
 import SignUp from './components/SignUp/SignUp'
 
 
+
 function App() {
   return (
-    <BrowserRouter>
-      <div className="app__wrap">
-        <Header />
-        <div className="app__content">
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Landing />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Route>
+    </Routes>
+  )
 }
 
 export default App;
