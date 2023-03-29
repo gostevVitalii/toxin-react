@@ -1,19 +1,13 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"
+import Logo from "../Logo/Logo"
 import s from './Header.module.css'
 
 const Header = () => {
   return (
     <div className={s.header}>
-      TOXIN
-      <NavLink
-        to="/signin">
-        Sign-In
-      </NavLink>
-      <NavLink
-        to="/signup">
-        Sign-Up
-      </NavLink>
+      <Logo />
+      <NavLink to="/signin">Sign-In</NavLink>
+      <NavLink to="/signup">Sign-Up</NavLink>
     </div>
   )
 }
