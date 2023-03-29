@@ -1,4 +1,10 @@
 .header {
   grid-area: h;
-  background-color: cornflowerblue;
+  background-color: white;
+  padding: 15px 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
 }
